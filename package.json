@@ -1,0 +1,47 @@
+{
+  "name": "@allara-health/source-health-client",
+  "version": "1.3.0",
+  "license": "MIT",
+  "description": "Official TypeScript bindings for the Source Health API",
+  "scripts": {
+    "build": "webpack",
+    "lint": "eslint src",
+    "compile": "tsc --noEmit",
+    "test": "jest"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "main": "dist/source-client.node.js",
+  "typings": "dist/src/index.d.ts",
+  "browser": "dist/source-client.js",
+  "sideEffects": false,
+  "devDependencies": {
+    "@faker-js/faker": "^7.2.0",
+    "@types/jest": "^28.1.1",
+    "@types/lodash": "^4.14.182",
+    "@types/node": "^16.7.10",
+    "@typescript-eslint/eslint-plugin": "^4.30.0",
+    "@typescript-eslint/parser": "^4.30.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-prettier": "^4.0.0",
+    "form-data": "^4.0.0",
+    "jest": "^28.1.1",
+    "jest-extended": "^2.0.0",
+    "lodash": "^4.17.21",
+    "nanoid": "3",
+    "prettier": "^2.3.2",
+    "ts-jest": "^28.0.4",
+    "ts-loader": "^9.2.6",
+    "ts-node": "^10.2.1",
+    "tslib": "^2.3.1",
+    "typescript": "^4.4.2",
+    "webpack": "^5.56.0",
+    "webpack-cli": "^4.8.0"
+  },
+  "dependencies": {
+    "jose": "^3.19.0"
+  }
+}
