@@ -13,6 +13,7 @@ import { LicenseResource } from './License'
 import { LocationResource } from './Location'
 import { MemberResource } from './Member'
 import { NotificationPreferencesResource } from './NotificationPreferences'
+import { PayerResource } from './Payer'
 import { QueueResource } from './Queue'
 import { RelationshipResource } from './Relationship'
 import { TagResource } from './Tag'
@@ -51,6 +52,7 @@ export const allResources = resourceNamespace({
   locations: resourceFactory(LocationResource),
   members: resourceFactory(MemberResource),
   notificationPreferences: resourceFactory(NotificationPreferencesResource),
+  payers: resourceFactory(PayerResource),
   queues: resourceFactory(QueueResource),
   relationships: resourceFactory(RelationshipResource),
   tags: resourceFactory(TagResource),
@@ -107,6 +109,7 @@ export * from './Location'
 export * from './Member'
 export * from './NoteContentNode'
 export * from './NotificationPreferences'
+export * from './Payer'
 export * from './Product'
 export * from './Question'
 export * from './Queue'
