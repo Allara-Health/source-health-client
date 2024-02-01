@@ -64,6 +64,7 @@ export async function setupAccount(): Promise<SetupAccountObject> {
   const liveApiKeyId = await getApiKeyId(ownerToken, true)
 
   const client = new Source(
+    '',
     new ApiKeyAuthentication(liveApiKeyId, response.data.live_secret_key!),
     {
       baseUrl,

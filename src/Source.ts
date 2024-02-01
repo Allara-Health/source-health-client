@@ -13,6 +13,8 @@ export interface SourceOptions extends Omit<Partial<SourceConfigurationOptions>,
 }
 
 export class Source {
+  // The base URL for the Source API
+  public readonly baseUrl: string
   // Configuration that's used in requests
   public readonly configuration: SourceConfiguration
 
@@ -22,15 +24,13 @@ export class Source {
   // Used to encode secrets for JWT signing
   public readonly tokens: TokenGenerator
 
-  constructor(authentication?: Authentication, options: SourceOptions = {}) {
+  constructor(baseUrl: string, authentication?: Authentication, options: SourceOptions = {}) {
+    this.baseUrl = baseUrl
     const adapter = options.adapter ?? createClientForEnvironment()
 
     this.configuration = new SourceConfiguration({
       authentication: authentication,
-      baseUrl:
-        process.env.NODE_ENV === 'production'
-          ? 'https://source-api.allara-aws.net'
-          : 'https://source-api.staging.source-api.allara-aws.net',
+      baseUrl,
       ...options,
     })
 

@@ -7,6 +7,7 @@ describe('TokenGenerator', () => {
 
   beforeAll(() => {
     client = new Source(
+      '',
       new ApiKeyAuthentication(
         'key_123',
         'sk_secret_that_is_at_least_256_bits_long_so_that_it_works',
