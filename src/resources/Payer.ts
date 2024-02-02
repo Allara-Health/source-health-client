@@ -27,6 +27,10 @@ export interface Payer {
    */
   status: PayerStatus
   /**
+   * Description for this payer
+   */
+  description?: string | null
+  /**
    * Timestamp of when the member was created.
    */
   created_at: string
@@ -100,7 +104,7 @@ export interface PayerCreateParams {
    * Description for this payer. The description is not displayed and is used to
    * capture administrative notes about the payer.
    */
-  description?: string | null
+  description: string
   /**
    * The status of the payer.
    */
@@ -121,7 +125,7 @@ export interface PayerUpdateParams {
   /**
    * The status of the payer.
    */
-  status?: PayerStatus | null
+  status?: PayerStatus
 
   /**
    * The effective date for the payer.
