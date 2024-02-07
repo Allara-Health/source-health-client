@@ -133,6 +133,16 @@ export interface Member {
    * all Members endpoint.
    */
   custom_fields: Record<string, unknown>
+
+  /*
+   * The identifer of the member's primary payer.
+   */
+  primary_payer_id: string | null
+
+  /**
+   * The region of the member's primary payer, i.e. "US-CA".
+   */
+  primary_payer_region: string | null
   /**
    * Timestamp of when the member was created.
    */
@@ -614,6 +624,15 @@ export interface MemberUpdateParams {
    * `enrollment_status` will be `redacted`. This is not valid as an input.
    */
   enrollment_status?: MemberUpdateParamsEnrollmentStatus
+  /*
+   * The identifer of the member's primary payer.
+   */
+  primary_payer_id?: string | null
+
+  /**
+   * The region of the member's primary payer, i.e. "US-CA".
+   */
+  primary_payer_region?: string | null
   /**
    * An array of external identifiers for the member. Each identifier is associated
    * with a particular external integration. The member's external identifier must be
