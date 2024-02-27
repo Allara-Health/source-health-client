@@ -3,6 +3,7 @@ import { SourceInstance, resourceFactory, resourceNamespace } from '../factories
 import { AccountResource } from './Account'
 import { CareTeamResource } from './CareTeam'
 import { CommentResource } from './Comment'
+import { CredentialResource } from './Credentials'
 import { DocumentResource } from './Document'
 import { EventResource } from './Event'
 import { FieldResource } from './Field'
@@ -42,6 +43,7 @@ export const allResources = resourceNamespace({
   accounts: resourceFactory(AccountResource),
   careTeams: resourceFactory(CareTeamResource),
   comments: resourceFactory(CommentResource),
+  credentials: resourceFactory(CredentialResource),
   documents: resourceFactory(DocumentResource),
   events: resourceFactory(EventResource),
   fields: resourceFactory(FieldResource),
@@ -131,6 +133,7 @@ export * from './clinical/NoteVersion'
 export * from './communications/Channel'
 export * from './communications/Message'
 export * from './communications/Thread'
+export * from './Credentials'
 export * from './forms/Form'
 export * from './forms/FormResponse'
 export * from './forms/FormVersion'
