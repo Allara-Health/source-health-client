@@ -1,6 +1,6 @@
 {
   "name": "@allara-health/source-health-client",
-  "version": "1.4.4",
+  "version": "1.4.5",
   "license": "MIT",
   "description": "Official Allara Health TypeScript bindings for the Source Health API",
   "repository": {
