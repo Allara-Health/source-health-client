@@ -6,7 +6,7 @@ export enum CredentialStatus {
   INACTIVE = 'inactive',
 }
 
-export type CredentialsListParamsSort = 'created_at' | 'name' | '-created_at' | '-name'
+export type CredentialsListParamsSort = 'created_at' | 'payer_id' | '-created_at' | '-payer_id'
 
 export interface Credential {
   object: 'credential'
@@ -52,6 +52,7 @@ export interface CredentialListResponse {
 }
 
 export interface CredentialListParams {
+  user: string
   /**
    * A cursor for use in pagination. `ending_before` is an object ID that defines
    * your place in the list. For instance, if you make a list request and receive 100
